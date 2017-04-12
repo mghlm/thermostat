@@ -42,5 +42,18 @@ describe ('Thermostat', function(){
     });
   });
 
+  describe('reset temp', function() {
+    it('to 20 degrees', function() {
+      thermostat.reset();
+      expect(thermostat.temp).toEqual(20);
+    });
+  });
+
+  describe('energy usage', function() {
+    it('is low', function() {
+      thermostat.down(5);
+      expect(thermostat.energyUsage()).toEqual('low-usage');
+    });
+  });
 
 });

@@ -31,4 +31,14 @@ Thermostat.prototype.down = function(degree){
   } else {
     this.temp = MIN_TEMP;
   }
+
+};
+Thermostat.prototype.reset = function() {
+  this.temp = 20;
+};
+
+Thermostat.prototype.energyUsage = function() {
+  if (this.temp < 18) {
+    return 'low-usage';
+  } 
 };
