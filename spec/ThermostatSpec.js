@@ -9,5 +9,12 @@ describe ('Thermostat', function(){
     expect(thermostat.temp).toEqual(20);
   });
 
-  
+  describe('Temp increases', function() {
+    it('by one degree', function() {
+      thermostat.up(1)
+      expect(thermostat.temp).toEqual(21)
+    });
+  });
+
+
 });
