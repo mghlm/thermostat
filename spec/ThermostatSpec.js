@@ -14,6 +14,10 @@ describe ('Thermostat', function(){
       thermostat.up(1);
       expect(thermostat.temp).toEqual(21)
     });
+    it('to no higher than 25 degrees, when powerSave is on', function() {
+      thermostat.up(45);
+      expect(thermostat.temp).toEqual(25);
+    });
   });
 
   describe('Temp decreases', function(){
