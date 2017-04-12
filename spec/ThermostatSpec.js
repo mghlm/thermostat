@@ -54,6 +54,14 @@ describe ('Thermostat', function(){
       thermostat.down(5);
       expect(thermostat.energyUsage()).toEqual('low-usage');
     });
+    it('is medium', function(){
+      thermostat.up(4);
+      expect(thermostat.energyUsage()).toEqual('medium-usage');
+    });
+    it('is high', function(){
+      thermostat.up(6);
+      expect(thermostat.energyUsage()).toEqual('high-usage');
+    });
   });
 
 });
