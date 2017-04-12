@@ -27,5 +27,11 @@ describe ('Thermostat', function(){
     });
   });
 
+  describe('powersave', function(){
+    it('is on by default', function(){
+      expect(thermostat.powerSave).toBeTruthy();
+    });
+  });
+
 
 });
