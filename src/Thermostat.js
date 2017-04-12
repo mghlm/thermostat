@@ -6,5 +6,9 @@ Thermostat.prototype.up = function(degree) {
 };
 
 Thermostat.prototype.down = function(degree){
-  this.temp -= degree;
+  if (this.temp - degree >= 10) {
+    this.temp -= degree;
+  } else {
+    this.temp = 10;
+  }
 };
