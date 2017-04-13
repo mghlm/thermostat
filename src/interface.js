@@ -21,6 +21,7 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temp);
+    $('#energyUsage').attr('class', thermostat.energyUsage());
     $('#energyUsage').text(thermostat.energyUsage());
     $('#powerSaveStatus').text(thermostat.powerSaveStatus());
   }
