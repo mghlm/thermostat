@@ -2,7 +2,6 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
 
-
   $('#up').click(function() {
     thermostat.up(1);
     updateTemperature();
@@ -19,13 +18,10 @@ $(document).ready(function() {
     thermostat.switchPowerSave();
     updateTemperature();
   });
-  $('#energyUsage').click(function() {
-    thermostat.energyUsage
-    updateTemperature();
-  });
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temp);
     $('#energyUsage').text(thermostat.energyUsage());
+    $('#powerSaveStatus').text(thermostat.powerSaveStatus());
   }
 })
