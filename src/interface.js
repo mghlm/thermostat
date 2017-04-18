@@ -43,16 +43,5 @@ $(document).ready(function() {
     $('#powerSaveStatus').text(thermostat.powerSaveStatus());
   }
 
-  $("#temp-circle").circliful({
-        animation: 1,
-        animationStep: 2,
-        foregroundBorderWidth: 15,
-        backgroundBorderWidth: 15,
-        percent: 32,
-        textSize: 400,
-        textStyle: 'font-size: 400px;',
-        textColor: '#666',
-        multiPercentage: 0,
-    });
 
 })

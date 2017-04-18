@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../src/jquery.circliful.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../src/Thermostat.js"></script>
+
     <title> Thermostat </title>
   </head>
 
   <body>
-
-      <h1> Current temperature: <span id="current-temperature"><span></h1>
-      <select id="current-city">
-        <option value="london">London</option>
-        <option value="newyork">New York</option>
-        <option value="copenhagen">Copenhagen</option>
-        <option value="oymyakon">Oymyakon</option>
-      </select>
-
-      <h1 id="temperature"></h1>
-
-      <h4 id='energyUsage'></h4>
-
-      <h3 id='powerSaveStatus'></h3>
-
-      <button type='button' id='up'>Increase temperature</button>
-      <button type='button' id='down'>Decrease temperature</button>
-      <button type='button' id='powerSave'>Toggle powersave</button>
-      <button type='button' id='reset'>Reset temperature</button>
-
-      <script type="text/javascript" src="../src/interface.js"></script>
-      <script src="../src/Thermostat.js"></script>
-
-      <div>
-        <div id="temp-circle"></div>
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-4">
       </div>
+
+        <div class="col-md-4">
+
+          <section>
+            <div class="inline-current-temp"><h1 id="current-temp-text"> Current temperature in : <span id="current-temperature"><span></h1> <h1 id="degree-sign"> ° </h1></div>
+            <form id="select-city">
+              <input id="current-city" type="text" placeholder="Enter a city"></input>
+              <input type="submit"></input>
+            </form>
+          </section>
+
+          <h1 id="temperature"></h1>
+
+          <h4 id='energyUsage'></h4>
+
+          <h3 id='powerSaveStatus'></h3>
+
+          <button type='button' id='up'>+</button>
+          <button type='button' id='down'>-</button>
+          <button type='button' id='powerSave'>Toggle powersave</button>
+          <button type='button' id='reset'>Reset temperature</button>
+
+        </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../src/interface.js"></script>
 
     </body>
 </html>
